@@ -1,0 +1,13 @@
+# demo2.script - short repo overview, one command per screen.
+# Run from the repo root: ./cmd-replay.sh scripts/demo2.script
+
+ls -1
+@sleep 1
+
+# @delay holds on the command line so git doesn't answer instantly
+@delay 0.6
+git status --short
+@sleep 1
+
+git log --oneline -5
+@sleep 2

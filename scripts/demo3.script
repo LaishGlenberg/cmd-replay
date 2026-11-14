@@ -1,0 +1,21 @@
+# demo3.script - @delay in action: the commands finish instantly, the screen
+# makes them look like they did some work. Run it from the repo root:
+#   ./cmd-replay.sh scripts/demo3.script
+
+# a "build" that is really just listing files
+@delay 1.2
+ls -1 scripts
+
+@sleep 1
+
+# nothing is fetched here, but it reads like a slow remote call
+@delay 1.5
+git log --oneline -3
+
+@sleep 1
+
+# shorter hold for a quick command, so the pacing varies like real work
+@delay 0.4
+git status --short
+
+@sleep 2

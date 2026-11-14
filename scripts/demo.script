@@ -1,0 +1,14 @@
+# demo.script - the sequence your README demo should show.
+# Blank lines and #comments are skipped.
+#   @sleep N  wait N extra seconds here
+#   @pause N  make the pause after the command above N seconds
+
+@delay 0.3
+ls -1
+@delay 0.3
+wc -l cmd-replay.sh scripts/*.script
+@delay 0.3
+head -12 cmd-replay.sh
+
+# holds the last screen; without it the script ends as soon as the last step finishes
+@sleep 2
